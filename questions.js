@@ -20,7 +20,7 @@ questions = [
     {
         "question": "do you think nazis are bad",
         "effect": {
-            "econ": -50,
+            "econ": 50,
             "dipl": 0,
             "govt": 0,
             "scty": 0
