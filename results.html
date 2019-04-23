@@ -30,7 +30,6 @@
 <p>Ideological matching is a work in progress, and is much less accurate than the values and axes.</p>
 <p>You can send these results by copying and pasting the URL at the top of the page or using the image below. Think your matched ideology was wrong? Want to help us calibrate the test? Send the results along with your political ideology to us at eightvalues@gmail.com, or send us any comments, questions, or criticism. </p>
 <hr/>
-<canvas id="banner" width=800 height=650 style="font-family:Montserrat"></canvas>
 <button class="button" onclick="location.href='index.html';" style="background-color: #2196f3;">Back</button> <br>
 <!-- Website visit statistics - no personal information is collected! -->
 <script type="text/javascript">
@@ -123,7 +122,9 @@ stats"></a></div></noscript>
             ideodist = dist
         }
     }
-    document.getElementById("ideology-label").innerHTML = ideology
+	if (equality < 50) ideology = "Good"
+	else ideology = "Bad"
+	document.getElementById("ideology-label").innerHTML = ideology
 
     function createImage(src, x, y, w, h) {
         img = new Image ()
